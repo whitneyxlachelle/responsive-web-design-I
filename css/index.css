@@ -145,14 +145,24 @@ h5 {
 
 .container {
   width: 880px;
-  margin: auto;
+  margin: 0 auto;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .container {
-    width: 500px;
-    display: flex;
-    flex-direction: column;
+    width: 800px;
+  }
+  .container header {
+    flex-direction: column-reverse;
+  }
+  .container header .logo {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container header nav {
+    justify-content: space-evenly;
+    width: 800px;
   }
 }
 
@@ -180,6 +190,7 @@ header nav a:hover {
 
 header .logo {
   margin: 28px 0 0 91px;
+  max-width: 100%;
 }
 
 /* Call To Action (CTA) Styles */
@@ -216,6 +227,20 @@ header .logo {
   color: white;
 }
 
+@media (max-width: 800px) {
+  .cta {
+    justify-content: center;
+  }
+
+  .cta .cta-text {
+    margin: 0 auto;
+  }
+
+  .cta img {
+    display: none;
+  }
+}
+
 /* Main Content Styles */
 
 .main-content {
@@ -234,6 +259,12 @@ header .logo {
 .main-content .middle-img {
   display: block;
   margin: 30px auto;
+}
+
+@media (max-width: 800px) {
+  .main-content .middle-img {
+    width: 800px;
+  }
 }
 
 .main-content .bottom-content {
@@ -257,7 +288,7 @@ header .logo {
 
   .main-content .text-content {
     width: 450px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
